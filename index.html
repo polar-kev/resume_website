@@ -30,7 +30,7 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <button id="btnCollapse" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -39,11 +39,11 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#aboutme">ABOUT ME</a></li>
-          <li><a href="#workexperience">WORK EXPERIENCE</a></li>
-          <li><a href="#portfolio">PORTFOLIO</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-          <li><a href="https://github.com/polar-kev" target="_blank">MY GITHUB</a></li>
+          <li><a class="hidenav" href="#aboutme">ABOUT ME</a></li>
+          <li><a class="hidenav" href="#workexperience">WORK EXPERIENCE</a></li>
+          <li><a class="hidenav" href="#portfolio">PORTFOLIO</a></li>
+          <li><a class="hidenav" href="#contact">CONTACT</a></li>
+          <li><a class="hidenav" href="https://github.com/polar-kev" target="_blank">MY GITHUB</a></li>
         </ul>
       </div>
     </div>
@@ -214,6 +214,15 @@
 
             <p>I was the lead programmer in this game developed for the HTC Vive as part of the Global Game Jam 2018.</p>
             <p> <a href="https://globalgamejam.org/2018/games/onepunch-robo" target="_blank"> Click here</a> to play! (PC only)</p>
+          </div>
+        </div>
+
+        <!--GI 20th Anniversary-->
+        <div class="masonry_item ">
+          <div class="thumbnail">
+              <h4><strong>Ground Illusionz 20th Anniversary</strong></h4>
+            <img src="images/gicrew2019.jpg" alt="GI Crew Img" width="400" height="300">
+            <p>In 2019, my dance crew Ground Illusionz celebrated their 20th anniversary. I joined Ground Illusionz in 2009.</p>
           </div>
         </div>
 
@@ -533,6 +542,11 @@ $(document).ready(function(){
   });
 });
 
+//Hide the nav menue after a selection is made in mobile mode
+$(".hidenav").click(function () {
+           if ($("#btnCollapse").css('display')!='none')
+           $("#btnCollapse").click();
+       });
 
 </script>
 
